@@ -13,6 +13,8 @@ main_window.setWindowTitle('Smart Notes')
 notes_window = QWidget()
 notes_window.resize(200,200)
 
+main_window.setStyleSheet('background-color:black')
+
 H = QHBoxLayout()
 main_layout_V1_text_edit = QVBoxLayout()
 main_layout_V2 = QVBoxLayout()
@@ -20,6 +22,9 @@ layout_h1 = QHBoxLayout()
 layout_h2 = QHBoxLayout()
 layout_h3 = QHBoxLayout()
 layout_h4 = QHBoxLayout()
+
+classs = 'background-color:white;color:black;border-radius:10px'
+button_class = 'background-color:white;color:black;border-radius:10px;height:100%;width:100%;'
 
 edit_note = QTextEdit()
 list_notes = QListWidget()
@@ -31,9 +36,25 @@ list_tags = QListWidget()
 label_list_tags = QLabel('Список тегов')
 tags_enter = QLineEdit('')
 tags_enter.setPlaceholderText('Введите тег...')
+tags_enter.setStyleSheet('color:white')
 btn_addtag_to_note = QPushButton('Добавить к заметке')
 btn_deltag_of_note = QPushButton('Открепить от заметки')
 btn_search_ontag = QPushButton('Искать заметку по тегу')
+
+edit_note.setStyleSheet('background-color:white;color:black;border-radius:10px')
+list_notes.setStyleSheet(classs)
+label_list_notes.setStyleSheet('color:white')
+btn_add_note.setStyleSheet(button_class)
+btn_del_note.setStyleSheet(button_class)
+btn_addtag_to_note.setStyleSheet(button_class)
+btn_deltag_of_note.setStyleSheet(button_class)
+btn_save_note.setStyleSheet(button_class)
+btn_search_ontag.setStyleSheet(button_class)
+label_list_tags.setStyleSheet('color:white;')
+list_tags.setStyleSheet('background-color:white;color:black')
+
+
+
 main_layout_V1_text_edit.addWidget(edit_note)
 main_layout_V2.addWidget(label_list_notes)
 main_layout_V2.addWidget(list_notes)
